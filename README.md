@@ -21,4 +21,13 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Column / Table
+  - Table:todo
+     - sequence:ID
+     - text:taskname
+     - date:deadline
+     - Ref:developer:ID
+  - Table:developer
+     - sequence:ID
+     - text:name
+     - text:e-mail
