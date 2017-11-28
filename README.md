@@ -31,3 +31,4 @@ Things you may want to cover:
      - sequence:ID
      - text:name
      - text:e-mail
+  - add
