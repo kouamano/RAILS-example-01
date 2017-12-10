@@ -26,9 +26,10 @@ Things you may want to cover:
      - sequence:ID
      - text:taskname
      - date:deadline
-     - Ref:developer:ID
   - Table:developer
      - sequence:ID
      - text:name
      - text:e-mail
-  - add
+  - Table:ref
+     - todo:ID
+     - developer:ID
