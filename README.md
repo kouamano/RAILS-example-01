@@ -22,14 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * Column / Table
-  - Table:todo
+  - Table:Todo
      - sequence:ID
      - text:taskname
      - date:deadline
-  - Table:developer
+  - Table:Developer
      - sequence:ID
      - text:name
      - text:e-mail
-  - Table:ref
+  - Table:Ref
      - todo:ID
      - developer:ID
