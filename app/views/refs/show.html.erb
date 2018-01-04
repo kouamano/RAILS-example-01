@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Todo:</strong>
+  <%= @ref.todo %>
+</p>
+
+<p>
+  <strong>Developer:</strong>
+  <%= @ref.developer %>
+</p>
+
+<%= link_to 'Edit', edit_ref_path(@ref) %> |
+<%= link_to 'Back', refs_path %>

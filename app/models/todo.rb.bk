@@ -1,0 +1,3 @@
+class Todo < ApplicationRecord
+  validates :taskname, length: {minimum: 2 }
+end

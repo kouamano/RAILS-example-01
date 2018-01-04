@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  todo: 1
+  developer: 1
+
+two:
+  todo: 1
+  developer: 1

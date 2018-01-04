@@ -1,0 +1,1 @@
+rails g migration AddDeveloperIdToRef developer_id:integer
