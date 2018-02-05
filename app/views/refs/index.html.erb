@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Todo</th>
-      <th>Developer</th>
+      <th>Todo ID</th>
+      <th>Developer ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @refs.each do |ref| %>
       <tr>
-        <td><%= ref.todo %></td>
-        <td><%= ref.developer %></td>
+        <td><%= ref.todo.taskname %></td>
+        <td><%= ref.developer.name %></td>
         <td><%= link_to 'Show', ref %></td>
         <td><%= link_to 'Edit', edit_ref_path(ref) %></td>
         <td><%= link_to 'Destroy', ref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
