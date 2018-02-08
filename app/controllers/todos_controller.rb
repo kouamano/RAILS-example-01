@@ -7,6 +7,10 @@ class TodosController < ApplicationController
     #@todos = Todo.all
     @todos = Todo.page(params[:page]).per(10)
     #@todos = Todo.page(params['page']).per(10)
+    #test
+    @params = params
+    @param_todo = params[:controller]
+    @param_user = params[:user]
   end
 
   # GET /todos/1
