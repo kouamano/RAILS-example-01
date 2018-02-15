@@ -3,6 +3,7 @@ class TodosController < ApplicationController
 
   # GET /todos
   # GET /todos.json
+
   def index
     #@todos = Todo.all
     @todos = Todo.page(params[:page]).per(10)
@@ -11,6 +12,7 @@ class TodosController < ApplicationController
     @params = params
     @param_todo = params[:controller]
     @param_user = params[:user]
+    @param_page = params[:page]
   end
 
   # GET /todos/1
