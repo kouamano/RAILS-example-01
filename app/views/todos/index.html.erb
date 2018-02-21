@@ -5,15 +5,17 @@
 
 <table>
   <tr><td><%= @params %></td></tr>
-  <tr><td><%= @param_page %></td></tr>
-  <tr><td><%= @param_todo %></td></tr>
+  <tr><td><%= srt=@params[:sort_by].to_s %></td></tr>
+  <tr><td><%= odr=@params[:odr_by].to_s %></td></tr>
+  <tr><td><% if odr=='ASC' then nodr='DESC' else nodr='ASC' end %></td></tr>
   <!-- <tr><td>If you indicate "user" param: <%= @param_user  %></td></tr> -->
 </table>
-
+<%= link_to("self", "http://192.168.122.143:3000/todos?sort_by=taskname&odr_by=ASC", {})%>
+<%= link_to("refs", "http://192.168.122.143:3000/refs", {})%>
 <table>
   <thead>
     <tr>
-      <th>Taskname</th>
+      <th><%= link_to("Task", "http://192.168.122.143:3000/todos"+"?sort_by="+srt+"&"+"odr_by="+nodr)%></th>
       <th>Deadline</th>
       <th>Stat</th>
       <th colspan="3"></th>
@@ -21,7 +23,7 @@
   </thead>
 
   <tbody>
-    <% @todos.order(deadline: :asc, taskname: :asc).each do |todo| %>
+    <% @todos.order(srt+' '+odr).each do |todo| %>
       <tr>
         <td><%= todo.taskname %></td>
         <td><%= todo.deadline %></td>
