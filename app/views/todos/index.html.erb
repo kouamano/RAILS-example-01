@@ -21,13 +21,13 @@
   </thead>
 
   <tbody>
-    <% @todos.each do |todo| %>
+    <% @todos.order(deadline: :asc, taskname: :asc).each do |todo| %>
       <tr>
         <td><%= todo.taskname %></td>
         <td><%= todo.deadline %></td>
         <%@stat='None'%>
         <%if todo.deadline%>
-          <%if Date.today > todo.deadline then @stat=1 else @stat=0 end%>
+          <%if Date.today > todo.deadline then @stat="Expired" else @stat="Under plan" end%>
         <%end%>
         <td><%= @stat %></td>
         <td><%= link_to 'Show', todo %></td>
