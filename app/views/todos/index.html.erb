@@ -7,6 +7,7 @@
   <tr><td><%= @params %></td></tr>
   <tr><td><%= srt=@params[:sort_by].to_s %></td></tr>
   <tr><td><%= odr=@params[:odr_by].to_s %></td></tr>
+  <tr><td><% if srt=='' then srt='taskname' end %></td></tr>
   <tr><td><% if odr=='ASC' then nodr='DESC' else nodr='ASC' end %></td></tr>
   <!-- <tr><td>If you indicate "user" param: <%= @param_user  %></td></tr> -->
 </table>
