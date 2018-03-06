@@ -11,8 +11,11 @@
   <tr><td><% if odr=='ASC' then nodr='DESC' else nodr='ASC' end %></td></tr>
   <!-- <tr><td>If you indicate "user" param: <%= @param_user  %></td></tr> -->
 </table>
+
 <%= link_to("self", "http://192.168.122.143:3000/todos?sort_by=taskname&odr_by=ASC", {})%>
 <%= link_to("refs", "http://192.168.122.143:3000/refs", {})%>
+<%= link_to("developers", "http://192.168.122.143:3000/developers", {})%>
+
 <table>
   <thead>
     <tr>
