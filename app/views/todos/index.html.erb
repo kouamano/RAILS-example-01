@@ -13,14 +13,15 @@
 </table>
 
 <%= link_to("self", "http://192.168.122.143:3000/todos?sort_by=taskname&odr_by=ASC", {})%>
-<%= link_to("refs", "http://192.168.122.143:3000/refs", {})%>
+<%= link_to("refs", "http://192.168.122.143:3000/refs?sort_by=ref&odr_by=ASC", {})%>
 <%= link_to("developers", "http://192.168.122.143:3000/developers", {})%>
 
 <table>
   <thead>
     <tr>
-      <th><%= link_to("Task", "http://192.168.122.143:3000/todos"+"?sort_by="+srt+"&"+"odr_by="+nodr)%></th>
-      <th>Deadline</th>
+      <th><%= link_to("Task", "http://192.168.122.143:3000/todos"+"?sort_by="+"taskname"+"&"+"odr_by="+nodr)%></th>
+      <th><%= link_to("Deadline", "http://192.168.122.143:3000/todos"+"?sort_by="+"deadline"+"&"+"odr_by="+nodr)%></th>
+      <!-- <th>Deadline</th> -->
       <th>Stat</th>
       <th colspan="3"></th>
     </tr>
